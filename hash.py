@@ -13,7 +13,7 @@ genai.configure(api_key="AIzaSyDl2nIaYT9ef8vJ6NDhXnIOUj-Z_UmYfXU")  # Replace wi
 # Function to load Gemini Pro model and get responses
 model = genai.GenerativeModel("gemini-1.0-pro")
 chat = model.start_chat(history=[])
-
+st.set_page_config(page_title="Hashtags GEN", layout="wide")
 def get_gemini_response(caption):
     try:
         prompt = f"Generate relevant 50 hashtags for the following caption: '{caption}'"
@@ -49,7 +49,7 @@ image_path = os.path.join(current_dir, "hashbg.png")
 set_background_image(image_path)
 
 # Initialize Streamlit app
-st.set_page_config(page_title="Hashtags GEN", layout="wide")
+# st.set_page_config(page_title="Hashtags GEN", layout="wide")
 st.header("Generate Hashtags")
 
 # User input
